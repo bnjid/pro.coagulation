@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Coagulation Lab | Memahami Proses Pembekuan Darah</title>
+<meta name="description" content="Media belajar interaktif untuk memahami intrinsic pathway, extrinsic pathway, common pathway, dan pembentukan fibrin melalui animasi dinamis.">
+<meta name="theme-color" content="#101a35">
+<link rel="canonical" href="https://bnjid.github.io/pro.coagulation/">
+<meta property="og:type" content="website"><meta property="og:title" content="Coagulation Lab — Pahami Proses Pembekuan Darah">
+<meta property="og:description" content="Jelajahi jalur intrinsic, extrinsic, dan common melalui animasi interaktif.">
+<meta property="og:url" content="https://bnjid.github.io/pro.coagulation/"><meta property="og:image" content="https://bnjid.github.io/pro.coagulation/coagulation-thumbnail.jpg">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Coagulation Lab">
+<meta name="twitter:description" content="Belajar proses koagulasi dengan animasi interaktif."><meta name="twitter:image" content="https://bnjid.github.io/pro.coagulation/coagulation-thumbnail.jpg">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XSN0M1W9R8"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-XSN0M1W9R8');</script>
+<style>
+:root{--navy:#101a35;--ink:#19233d;--muted:#66718b;--line:#e2e7f0;--paper:#f5f7fb;--white:#fff;--blue:#3478e5;--cyan:#16a6bd;--orange:#ef8d36;--purple:#8663d7;--red:#e45a68;--green:#1b9a76;--shadow:0 14px 40px #18264b12}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.55}
+header{background:radial-gradient(circle at 85% 0%,#314c83 0,transparent 32%),linear-gradient(120deg,#101a35,#192c50);color:white;padding:22px max(22px,calc((100% - 1180px)/2)) 38px}
+.top{display:flex;align-items:center;gap:12px}.logo{width:46px;height:46px}.brand{font-weight:850;letter-spacing:.2px}.brand small{display:block;font-size:11px;color:#b9c7e3;font-weight:600;letter-spacing:1.5px;text-transform:uppercase}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:25px;align-items:center;padding:30px 0 6px}.eyebrow{color:#8bd9e6;font-weight:800;font-size:12px;letter-spacing:1.8px;text-transform:uppercase}.hero h1{font-size:clamp(32px,5vw,54px);line-height:1.05;margin:10px 0 14px;letter-spacing:-1.7px}.hero p{max-width:670px;color:#d0daec;margin:0;font-size:16px}.hero-art{min-height:180px;display:grid;place-items:center}.hero-art svg{width:min(100%,420px);filter:drop-shadow(0 18px 22px #0005)}
+main{max-width:1180px;margin:0 auto;padding:25px 20px 70px}.nav{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 20px}.nav button,.btn{border:0;border-radius:12px;padding:11px 16px;font-weight:800;cursor:pointer;font-size:14px;transition:.2s}.nav button{background:#e8edf6;color:#40506d}.nav button.active{background:var(--navy);color:#fff}.btn.primary{background:var(--blue);color:white}.btn.dark{background:var(--navy);color:white}.btn.ghost{background:#eef2f8;color:#34415d}.btn:hover,.nav button:hover{transform:translateY(-1px);filter:brightness(1.03)}button:focus-visible{outline:3px solid #f1bb57;outline-offset:3px}
+.panel{background:white;border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--shadow);margin-bottom:18px}.section-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;margin-bottom:15px}.section-head h2{margin:0;font-size:23px;letter-spacing:-.5px}.sub{color:var(--muted);font-size:14px;margin:4px 0 0}.pill{font-size:11px;font-weight:850;padding:6px 10px;border-radius:30px;background:#edf4ff;color:#3167bd;white-space:nowrap}
+.path-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0}.path-tabs button{border:1px solid var(--line);background:white;padding:10px 14px;border-radius:12px;font-weight:800;color:#56627b;cursor:pointer}.path-tabs button.active[data-path="intrinsic"]{background:#edf3ff;border-color:#91b6f2;color:#245fc3}.path-tabs button.active[data-path="extrinsic"]{background:#fff3e9;border-color:#f5bd8d;color:#b96019}.path-tabs button.active[data-path="common"]{background:#f2edff;border-color:#c6b4f2;color:#6d4bb6}
+.explain-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:18px}.story{background:#f7f9fc;border-radius:16px;padding:18px;min-height:260px}.story h3{margin:0 0 8px;font-size:18px}.story p{margin:0 0 12px;color:#53617a;font-size:14px}.story .big{font-size:27px;font-weight:900;letter-spacing:-1px;margin:6px 0}.factline{display:flex;gap:9px;align-items:flex-start;margin:11px 0;font-size:13px;color:#46536c}.dot{width:9px;height:9px;border-radius:50%;background:var(--blue);margin-top:6px;flex:none}
+.diagram-wrap{background:linear-gradient(145deg,#fbfcff,#f1f5fb);border:1px solid #e6ebf4;border-radius:16px;padding:14px;min-height:260px;position:relative;overflow:hidden}.diagram-title{font-size:12px;font-weight:900;color:#78839a;letter-spacing:1.2px;text-transform:uppercase;margin:2px 4px 8px}.diagram{width:100%;height:225px;display:block}.node rect{fill:white;stroke:#cbd5e5;stroke-width:1.5;rx:10}.node text{font-size:12px;font-weight:850;fill:#24334f;text-anchor:middle}.node .small{font-size:9px;fill:#74819a;font-weight:650}.node.active rect{stroke:#ef8d36;stroke-width:3;filter:drop-shadow(0 0 5px #ef8d3680)}.node.done rect{fill:#eaf8f3;stroke:#39a982}.flow{fill:none;stroke:#b7c2d4;stroke-width:2.4;stroke-linecap:round;stroke-dasharray:5 6}.flow.active{stroke:#ef8d36;stroke-width:3;stroke-dasharray:7 5;animation:dash 1s linear infinite}.particle{fill:#ef8d36;filter:drop-shadow(0 0 4px #ef8d36)}@keyframes dash{to{stroke-dashoffset:-24}}@keyframes pulse{50%{transform:scale(1.06);filter:drop-shadow(0 0 9px #efa24d)}}.node.active rect{animation:pulse 1s ease-in-out infinite}
+.sim-controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:15px}.sim-status{color:#65718a;font-size:13px;font-weight:700}.progress{height:7px;background:#e9edf4;border-radius:8px;overflow:hidden;margin-top:12px}.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#3984e8,#20b79c);transition:width .35s}
+.sequence{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}.seq-card{border:1px solid var(--line);border-radius:14px;padding:15px;background:#fff}.seq-card b{display:block;font-size:14px;margin-bottom:5px}.seq-card p{margin:0;color:#68748a;font-size:12px}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:15px}.compare article{border-radius:16px;padding:18px;border:1px solid var(--line);background:#fff}.compare h3{margin:0 0 6px}.compare p{font-size:13px;color:#63708a;margin:0 0 10px}.factor-chain{font-weight:900;font-size:15px;line-height:2;color:#253a5f}.factor-chain span{display:inline-block;background:#edf3ff;padding:3px 8px;border-radius:8px;margin:2px}.extrinsic .factor-chain span{background:#fff0e4}.common .factor-chain span{background:#f0ebff}
+.key-note{background:#fff8e9;border:1px solid #f5dfae;padding:14px 16px;border-radius:14px;font-size:13px;color:#6f5424;margin-top:15px}.key-note strong{color:#65420a}
+.table{width:100%;border-collapse:collapse;font-size:13px}.table th,.table td{padding:10px;border-bottom:1px solid var(--line);text-align:left}.table th{color:#66718a;background:#f8faff}.table td:first-child{font-weight:850}
+.quiz-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.quiz-q{font-weight:850;font-size:16px;margin:0 0 12px}.choice{display:block;width:100%;text-align:left;background:#f7f9fc;border:1px solid var(--line);padding:11px 13px;border-radius:11px;margin:7px 0;cursor:pointer;color:#2d3a55;font:inherit;font-size:13px}.choice.correct{border-color:#36a77f;background:#eaf8f2}.choice.wrong{border-color:#df6870;background:#fff0f1}.feedback{font-size:13px;min-height:40px;color:#5f6c83;margin-top:10px}.hide{display:none!important}
+footer{text-align:center;color:#8a94a8;font-size:12px;padding:18px}
+
+.glossary-tools{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}.glossary-tools input,.glossary-tools select{border:1px solid var(--line);border-radius:11px;padding:11px 13px;font:inherit;background:white;color:var(--ink);min-width:180px;flex:1}
+.glossary-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}.term-card{border:1px solid var(--line);border-radius:14px;padding:14px;background:#fff;min-height:112px}.term-card .abbr{font-size:16px;font-weight:900;color:#2e66bb;letter-spacing:.2px}.term-card .full{font-size:13px;font-weight:800;margin:3px 0 6px}.term-card p{font-size:12px;color:#66718a;margin:0}.term-card .category{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:#9a6a35;font-weight:900}
+.glossary-count{font-size:12px;color:#7b879b;font-weight:700;margin:0 0 10px}
+@media(max-width:760px){.glossary-grid{grid-template-columns:1fr 1fr}}@media(max-width:460px){.glossary-grid{grid-template-columns:1fr}}
+@media(max-width:760px){.hero{grid-template-columns:1fr}.hero-art{min-height:125px}.hero-art svg{max-width:300px}.explain-grid,.compare,.quiz-grid{grid-template-columns:1fr}.sequence{grid-template-columns:1fr}.section-head{display:block}.pill{display:inline-block;margin-top:10px}.panel{padding:16px}.diagram-wrap{padding:8px}.diagram{height:210px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+.acronym-expansion{font-size:.88em;color:#52617b;font-weight:550;white-space:normal}
+.acronym-expansion::before{content:" ("}.acronym-expansion::after{content:")"}
+.acronym-term{font-weight:850;color:#245fae}
+.nav{position:sticky;top:0;z-index:20;background:rgba(245,247,251,.94);backdrop-filter:blur(12px);padding:10px 0;border-bottom:1px solid #e2e7f0}
+.nav button{flex:0 0 auto}
+.panel{box-shadow:0 8px 28px #18264b0c}
+.story{border:1px solid #e7edf6}
+.section-head{align-items:center}
+@media(max-width:600px){.nav{overflow-x:auto;flex-wrap:nowrap;padding:9px 0}.nav button{white-space:nowrap;font-size:12px;padding:10px 12px}.acronym-expansion{display:inline}}
+
+/* Coagulation Challenge: quiz, timer and printable certificate */
+.quiz-intro-panel{overflow:hidden;background:linear-gradient(145deg,#fff 0%,#f7faff 100%)}
+.quiz-bank-pill{background:#eaf8f2;color:#187d5e}
+.quiz-highlight-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0 22px}
+.quiz-highlight{display:flex;align-items:center;gap:12px;padding:14px;border:1px solid #e3eaf4;border-radius:15px;background:#fff}
+.quiz-highlight-icon{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:#edf3ff;font-size:21px;flex:none}
+.quiz-highlight b,.quiz-highlight small{display:block}.quiz-highlight b{font-size:14px}.quiz-highlight small{font-size:11px;color:#758198;margin-top:2px}
+.quiz-config{display:grid;grid-template-columns:.9fr 1.1fr;gap:25px;padding:22px;border-radius:18px;background:linear-gradient(120deg,#142345,#203c69);color:#fff}
+.quiz-config-copy h3{font-size:23px;line-height:1.2;margin:2px 0 10px}.quiz-config-copy p{color:#cad5e9;font-size:14px;max-width:420px;margin:0}
+.quiz-config-fields{background:#fff;color:var(--ink);border-radius:15px;padding:18px}
+.quiz-config-fields label{display:block;font-size:12px;font-weight:850;color:#485773;margin:0 0 6px}
+.quiz-config-fields input,.quiz-config-fields select{width:100%;border:1px solid #dce4f0;border-radius:10px;padding:12px 13px;background:#fbfcff;color:#23314e;font:inherit;font-size:14px;margin-bottom:12px;min-width:0}
+.quiz-config-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.quiz-start-btn{width:100%;padding:14px 17px;font-size:15px;display:flex;justify-content:space-between;align-items:center;margin-top:2px}
+.quiz-config-note{font-size:11px;color:#7b879b;margin:10px 0 0;line-height:1.45}
+.quiz-stage{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--shadow);margin:18px 0}
+.quiz-statusbar{display:grid;grid-template-columns:1fr auto auto;gap:12px;align-items:center;margin-bottom:15px}
+.quiz-status-label{font-weight:900;font-size:13px;color:#42516e}.quiz-status-label small{display:block;color:#8994a8;font-weight:650;font-size:11px}
+.quiz-score-chip{background:#edf4ff;color:#2d65b8;padding:8px 12px;border-radius:12px;font-size:12px;font-weight:900;white-space:nowrap}
+.quiz-timer{--timer-progress:100%;width:62px;height:62px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(#27a783 var(--timer-progress),#e8edf4 0);position:relative;flex:none}
+.quiz-timer::before{content:"";position:absolute;inset:5px;border-radius:50%;background:#fff}.quiz-timer strong{position:relative;font-size:20px;color:#233553;font-variant-numeric:tabular-nums}.quiz-timer.warning{background:conic-gradient(#e45a68 var(--timer-progress),#f7e7e9 0);animation:timerBeat .65s ease-in-out infinite alternate}
+@keyframes timerBeat{to{transform:scale(1.04)}}
+.quiz-progress-track{height:7px;border-radius:20px;background:#edf1f6;overflow:hidden;margin:0 0 20px}.quiz-progress-track span{display:block;height:100%;width:0;background:linear-gradient(90deg,#3478e5,#19a987);transition:width .25s}
+.quiz-question-card{border:1px solid #e3eaf4;border-radius:17px;padding:22px;background:linear-gradient(145deg,#fff,#fbfcff)}
+.quiz-question-meta{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:12px}.quiz-question-meta span{font-size:11px;font-weight:900;color:#748199;letter-spacing:.7px;text-transform:uppercase}.quiz-level{border-radius:20px;padding:5px 9px;background:#f0edff;color:#6c51b2!important;letter-spacing:0!important}
+.quiz-question{font-size:clamp(18px,2.5vw,23px);line-height:1.35;letter-spacing:-.35px;margin:0 0 17px;color:#1e2c48}
+.quiz-options{display:grid;grid-template-columns:1fr 1fr;gap:10px}.quiz-option{display:flex;align-items:flex-start;gap:11px;text-align:left;width:100%;min-height:64px;padding:13px;border:1px solid #dfe6f0;border-radius:13px;background:#fff;color:#33415e;font:inherit;font-size:13px;line-height:1.45;cursor:pointer;transition:.16s}
+.quiz-option:hover:not(:disabled){border-color:#7da8ed;background:#f6f9ff;transform:translateY(-1px)}.quiz-option:disabled{cursor:default;opacity:1}
+.quiz-option-key{width:27px;height:27px;display:grid;place-items:center;border-radius:8px;background:#edf2f8;color:#52627d;font-size:12px;font-weight:900;flex:none}
+.quiz-option.correct{border-color:#42b58c;background:#ecfaf4;color:#176b50}.quiz-option.correct .quiz-option-key{background:#c9f0df;color:#13724e}
+.quiz-option.incorrect{border-color:#e47a81;background:#fff1f1;color:#a53d49}.quiz-option.incorrect .quiz-option-key{background:#ffe0e2;color:#a53d49}
+.quiz-feedback{display:none;margin:15px 0 0;padding:13px 15px;border-radius:12px;font-size:13px;line-height:1.55}.quiz-feedback.show{display:block}.quiz-feedback.good{background:#eaf8f2;color:#236a52;border:1px solid #c7ebdc}.quiz-feedback.bad{background:#fff5e8;color:#81551d;border:1px solid #f3dfbd}
+.quiz-controls{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:16px}.quiz-time-note{color:#8792a5;font-size:11px}.quiz-next-btn{min-width:142px}
+.quiz-result{margin:18px 0}.quiz-result-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:var(--shadow)}
+.quiz-result-top{text-align:center;padding:10px 10px 22px}.quiz-trophy{width:86px;height:86px;margin:0 auto 12px;display:grid;place-items:center;border-radius:25px;background:linear-gradient(145deg,#fff3cf,#ffe5a1);box-shadow:0 9px 24px #d18d2a22}.quiz-result-top h2{font-size:27px;margin:0 0 5px}.quiz-result-top p{color:#718098;margin:0;font-size:14px}
+.quiz-result-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:8px 0 20px}.quiz-stat{background:#f6f8fc;border:1px solid #e8edf5;border-radius:14px;padding:14px;text-align:center}.quiz-stat b{font-size:25px;display:block;color:#203456;line-height:1.2}.quiz-stat span{font-size:11px;color:#77839a;font-weight:750}
+.quiz-result-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:18px 0 24px}
+.quiz-review{border-top:1px solid #e7edf5;padding-top:18px}.quiz-review h3{margin:0 0 12px;font-size:17px}.review-item{border:1px solid #e7edf5;border-radius:13px;padding:13px;margin:9px 0;background:#fff}.review-item summary{cursor:pointer;font-size:13px;font-weight:850;color:#35435f}.review-item p{font-size:12px;color:#63718a;margin:9px 0 0}.review-good{color:#19815e;font-weight:850}.review-bad{color:#b34c57;font-weight:850}
+.certificate-shell{margin:26px 0 8px}.certificate{position:relative;overflow:hidden;min-height:470px;padding:35px 45px;border:8px double #c79d49;border-radius:8px;background:radial-gradient(circle at 50% 35%,#fff 0,#fffdf6 68%,#f8f0dc 100%);text-align:center;color:#243451}
+.certificate::before,.certificate::after{content:"";position:absolute;width:190px;height:190px;border:1px solid #d8bb7b;border-radius:50%;opacity:.25}.certificate::before{left:-95px;top:-95px}.certificate::after{right:-95px;bottom:-95px}
+.certificate-kicker{font-size:11px;letter-spacing:3px;font-weight:950;color:#99732e}.certificate-trophy{width:58px;height:58px;margin:12px auto 6px}.certificate h2{font-family:Georgia,serif;font-weight:500;font-size:clamp(28px,4vw,42px);letter-spacing:1px;margin:5px 0;color:#243451}.certificate-lead{font-family:Georgia,serif;font-style:italic;color:#778198;font-size:16px;margin:10px 0 0}.certificate-name{font-family:Georgia,serif;font-size:clamp(25px,4vw,37px);font-weight:700;color:#a1762d;margin:9px 0 12px;padding-bottom:8px;border-bottom:1px solid #dec994;display:inline-block;min-width:min(75%,340px)}
+.certificate-description{font-size:13px;line-height:1.65;max-width:650px;margin:0 auto;color:#5d6880}.certificate-score{font-family:Georgia,serif;font-size:30px;color:#9b742f;font-weight:700;margin:14px 0 4px}.certificate-status{display:inline-block;border:1px solid #d7bf8b;padding:6px 14px;border-radius:30px;font-size:10px;letter-spacing:1.5px;font-weight:950;color:#8a682c;margin:5px 0 18px}.certificate-footer{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-top:18px;text-align:left}.certificate-footer div{font-size:11px;color:#6f7b91}.certificate-sign{border-top:1px solid #b5a16e;padding-top:7px;min-width:185px;text-align:center!important;font-weight:800;color:#43516b!important}
+@media(max-width:760px){.quiz-highlight-grid{grid-template-columns:1fr}.quiz-config{grid-template-columns:1fr;gap:15px;padding:16px}.quiz-config-copy h3{font-size:20px}.quiz-stage,.quiz-result-card{padding:15px}.quiz-options{grid-template-columns:1fr}.quiz-result-stats{grid-template-columns:1fr 1fr}.quiz-statusbar{grid-template-columns:1fr auto}.quiz-score-chip{grid-column:1;grid-row:2;justify-self:start}.quiz-timer{grid-column:2;grid-row:1/3}.certificate{padding:25px 17px;min-height:400px}.certificate-footer{align-items:center;flex-direction:column}.certificate-sign{min-width:170px}.quiz-controls{align-items:flex-start;flex-direction:column}}
+@media print{
+  @page{size:A4 landscape;margin:10mm}
+  body{background:#fff!important;margin:0!important;padding:0!important}
+  body *{visibility:hidden!important}
+  body>header,main>.nav,main>.view:not(#quiz),main>footer,#quiz>.quiz-intro-panel,#quiz>#quizStage,#quizResult .quiz-result-card>:not(#certificateShell){display:none!important}
+  main{display:block!important;width:100%!important;max-width:none!important;margin:0!important;padding:0!important}
+  #quiz,#quizResult,.quiz-result-card,#certificateShell{display:block!important;position:static!important;width:100%!important;margin:0!important;padding:0!important;border:0!important;box-shadow:none!important}
+  #certificateShell,#certificateShell *{visibility:visible!important}
+  .certificate{width:100%!important;min-height:175mm!important;height:175mm!important;padding:25px 38px!important;border-width:7px!important;box-shadow:none!important;break-inside:avoid!important;page-break-inside:avoid!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .certificate::before,.certificate::after{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+
+</style></head>
+<body>
+<header><div class="top"><img class="logo" src="coagulation-mark.svg" alt="Logo Coagulation Lab"><div class="brand">COAGULATION LAB<small>Interactive learning experience</small></div></div>
+<div class="hero"><div><div class="eyebrow">Belajar dengan melihat prosesnya</div><h1>Dari luka kecil<br>menjadi bekuan kuat.</h1><p>Ikuti perjalanan faktor koagulasi: dua jalur awal yang berbeda, satu titik pertemuan, lalu terbentuk jaringan fibrin yang memperkuat platelet plug.</p></div>
+<div class="hero-art"><svg viewBox="0 0 440 230" role="img" aria-label="Ilustrasi jaringan fibrin yang menjerat sel darah"><defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#ffb35d"/><stop offset="1" stop-color="#ef6276"/></linearGradient></defs><path d="M30 40 Q110 10 180 60 T410 45 M25 180 Q130 130 210 185 T420 170 M65 15 Q40 100 100 220 M180 5 Q230 100 180 220 M320 0 Q270 100 350 220 M410 15 Q340 90 420 130" fill="none" stroke="#7dd7df" stroke-width="3" opacity=".8"/><g fill="#ef7180" stroke="#ffc0c5" stroke-width="3"><ellipse cx="125" cy="95" rx="25" ry="13" transform="rotate(22 125 95)"/><ellipse cx="275" cy="130" rx="27" ry="14" transform="rotate(-18 275 130)"/><ellipse cx="350" cy="70" rx="23" ry="12" transform="rotate(35 350 70)"/></g><g fill="none" stroke="url(#g)" stroke-width="5" stroke-linecap="round"><path d="M55 65 Q140 30 200 100 T380 80"/><path d="M50 150 Q145 205 230 140 T395 185"/><path d="M90 25 Q130 105 90 205"/><path d="M220 20 Q260 95 220 210"/><path d="M340 15 Q300 95 370 210"/></g><g fill="#fff" opacity=".9"><circle cx="200" cy="100" r="5"/><circle cx="90" cy="150" r="5"/><circle cx="370" cy="185" r="5"/></g></svg></div></div></header>
+<main>
+<nav class="nav" aria-label="Navigasi utama"><button class="active" data-view="explore">Jelajahi jalur</button><button data-view="overview">Gambaran besar</button><button data-view="clinical">Hubungan klinis</button><button data-view="glossary">Kamus istilah</button><button data-view="quiz">Uji pemahaman</button></nav>
+<section id="explore" class="view">
+<div class="panel"><div class="section-head"><div><h2>Bagaimana koagulasi berjalan?</h2><p class="sub">Pilih jalur, lalu tekan <b>Putar animasi</b>. Perhatikan bagaimana setiap faktor mengaktifkan faktor berikutnya.</p></div><span class="pill">SIMULASI INTERAKTIF</span></div>
+<div class="path-tabs"><button class="active" data-path="intrinsic">Intrinsic pathway</button><button data-path="extrinsic">Extrinsic pathway</button><button data-path="common">Common pathway</button></div>
+<div class="explain-grid"><div class="story"><div class="eyebrow" id="storyLabel" style="color:#3975cf">JALUR KONTAK</div><div class="big" id="storyBig">XII → XI → IX</div><h3 id="storyTitle">Intrinsic pathway</h3><p id="storyText">Model klasik ini menggambarkan aktivasi berurutan faktor koagulasi yang berada di dalam plasma. Dalam pemeriksaan laboratorium, jalur ini terutama tercermin pada aPTT.</p><div id="storyFacts"></div></div>
+<div class="diagram-wrap"><div class="diagram-title" id="diagramTitle">Urutan aktivasi faktor</div><svg id="pathDiagram" class="diagram" viewBox="0 0 520 240" role="img" aria-label="Diagram jalur koagulasi interaktif"></svg><div class="sim-controls"><button class="btn primary" id="playBtn">▶ Putar animasi</button><button class="btn ghost" id="stepBtn">Langkah berikutnya</button><button class="btn ghost" id="resetBtn">↺ Ulangi</button><span class="sim-status" id="simStatus" aria-live="polite">Siap dimulai</span></div><div class="progress"><span id="simProgress"></span></div></div></div>
+<div class="sequence" id="sequence"></div></div>
+</section>
+<section id="overview" class="view hide">
+<div class="panel"><div class="section-head"><div><h2>Tiga jalur, satu tujuan</h2><p class="sub">Intrinsic dan extrinsic pathway bertemu pada aktivasi factor X. Setelah itu, common pathway menghasilkan fibrin.</p></div><span class="pill">PETA KONSEP</span></div>
+<div class="compare"><article><h3 style="color:#2868c7">🔹 Intrinsic pathway</h3><p>Contact activation dalam model klasik.</p><div class="factor-chain"><span>XII → XIIa</span> ↓ <span>XI → XIa</span> ↓ <span>IX → IXa</span> + <span>VIIIa</span> ↓ <span>X → Xa</span></div><p>Kompleks <b>intrinsic tenase</b> = IXa + VIIIa + Ca²⁺ + phospholipid.</p></article>
+<article class="extrinsic"><h3 style="color:#b96a27">🟠 Extrinsic pathway</h3><p>Dimulai ketika tissue factor (TF) terekspos akibat kerusakan jaringan.</p><div class="factor-chain"><span>TF + VIIa</span> ↓ <span>X → Xa</span></div><p>Kompleks <b>TF–VIIa</b> mengaktifkan factor X dan juga dapat mengaktifkan factor IX.</p></article></div>
+<div class="panel" style="box-shadow:none;margin:16px 0 0;background:#faf8ff"><h3 style="margin:0 0 8px;color:#7052b3">🟣 Common pathway</h3><div class="factor-chain"><span>Xa + Va + Ca²⁺ + phospholipid</span> ↓ <span>II (prothrombin) → IIa (thrombin)</span> ↓ <span>I (fibrinogen) → fibrin</span> ↓ <span>XIII → XIIIa</span> ↓ <span>Cross-linked fibrin clot</span></div><p class="sub">Kompleks Xa–Va disebut <b>prothrombinase complex</b>. Thrombin mengubah fibrinogen menjadi fibrin dan mengaktifkan factor XIII yang kemudian mengikat silang (cross-link) serat fibrin.</p></div>
+<div class="key-note"><strong>Inti yang perlu diingat:</strong> kedua jalur awal bukan dua proses yang benar-benar terpisah di dalam tubuh. Model intrinsic–extrinsic terutama berguna untuk memahami urutan faktor dan hasil pemeriksaan PT/aPTT. Secara fisiologis, koagulasi dimulai oleh tissue factor, kemudian diperkuat melalui thrombin dan platelet surface.</div></div>
+</section>
+<section id="clinical" class="view hide">
+<div class="panel"><div class="section-head"><div><h2>Menghubungkan pathway dengan pemeriksaan</h2><p class="sub">PT, PTT/aPTT, dan TT adalah singkatan nama pemeriksaan waktu pembekuan. Pola hasilnya membantu memperkirakan bagian sistem koagulasi yang terganggu.</p></div><span class="pill">CLINICAL CONNECTION</span></div>
+<table class="table"><thead><tr><th>Pemeriksaan</th><th>Jalur yang dinilai</th><th>Faktor utama</th><th>Contoh interpretasi</th></tr></thead><tbody>
+<tr><td>PT / INR</td><td>Extrinsic + common</td><td>VII; X, V, II, I</td><td>PT memanjang dapat berkaitan dengan gangguan factor VII, defisiensi vitamin K, atau gangguan common pathway.</td></tr>
+<tr><td>aPTT (activated PTT)</td><td>Intrinsic + common</td><td>XII, XI, IX, VIII; X, V, II, I</td><td>aPTT memanjang dapat ditemukan pada hemophilia A/B, defisiensi faktor tertentu, atau inhibitor.</td></tr>
+<tr><td>Thrombin time (TT)</td><td>Konversi fibrinogen → fibrin</td><td>Fibrinogen (I)</td><td>Dapat memanjang pada gangguan jumlah/fungsi fibrinogen atau adanya inhibitor thrombin.</td></tr></tbody></table>
+<div class="key-note"><strong>Catatan interpretasi:</strong> PT, aPTT, dan TT bukan diagnosis tunggal. Hasil harus dinilai bersama riwayat klinis, obat antikoagulan, kondisi pasien, dan pemeriksaan lanjutan.</div>
+<h3 style="margin:22px 0 8px">Satu hal penting: cascade klasik vs proses in vivo</h3>
+<p class="sub">Skema intrinsic–extrinsic sangat berguna untuk belajar faktor koagulasi dan memahami PT/aPTT. Namun, di dalam tubuh, proses umumnya dimulai ketika tissue factor (TF) berikatan dengan factor VIIa. Kompleks TF–VIIa mengaktifkan factor X sekaligus factor IX. Thrombin yang terbentuk kemudian mengaktifkan platelet serta faktor V, VIII, dan XI sehingga terjadi amplification dan propagation pada permukaan platelet. Karena itu, intrinsic pathway dalam diagram klasik tidak boleh dianggap sebagai satu-satunya pemicu fisiologis pembekuan.</p>
+<h3 style="margin:22px 0 8px">Bacaan ilmiah lanjutan</h3>
+<ul style="font-size:13px;color:#5f6c83;padding-left:20px">
+<li><a href="https://www.ncbi.nlm.nih.gov/books/NBK482253/" target="_blank" rel="noopener">NCBI Bookshelf — Physiology, Coagulation Pathways</a></li>
+<li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11519239/" target="_blank" rel="noopener">Back to basics: the coagulation pathway (2024)</a></li>
+<li><a href="https://www.bleeding.org/educational-programs/education/online-education/the-clotting-cascade" target="_blank" rel="noopener">National Bleeding Disorders Foundation — The Clotting Cascade</a></li>
+</ul>
+<h3 style="margin:22px 0 8px">Mengapa calcium dan platelet surface penting?</h3><p class="sub">Ca²⁺ (factor IV) membantu interaksi faktor koagulasi dengan membran fosfolipid. Platelet yang teraktivasi mengekspos phosphatidylserine (PS), menyediakan permukaan tempat kompleks tenase dan prothrombinase tersusun secara efisien. Dengan demikian, primary hemostasis dan secondary hemostasis saling terhubung.</p>
+</div></section>
+
+<section id="glossary" class="view hide">
+<div class="panel">
+<div class="section-head"><div><h2>Kamus istilah</h2><p class="sub">Kepanjangan singkatan juga ditampilkan langsung di seluruh materi. Gunakan kamus ini untuk mencari definisi dan fungsi istilah secara lebih lengkap.</p></div><span class="pill">KAMUS INTERAKTIF</span></div>
+<div class="key-note"><strong>Perlu dibedakan:</strong> PTT adalah <i>partial thromboplastin time</i>, sedangkan aPTT adalah <i>activated partial thromboplastin time</i>. aPTT menggunakan aktivator untuk menstandarkan aktivasi contact pathway. Dalam praktik laboratorium, istilah PTT kadang dipakai secara longgar sebagai sinonim aPTT, tetapi keduanya tidak selalu identik secara metodologis.</div>
+<div class="glossary-tools"><input id="glossarySearch" type="search" placeholder="Cari singkatan atau istilah… (mis. PTT, thrombin)"><select id="glossaryCategory"><option value="all">Semua kategori</option><option value="Pemeriksaan">Pemeriksaan laboratorium</option><option value="Faktor koagulasi">Faktor koagulasi</option><option value="Molekul dan reseptor">Molekul dan reseptor</option><option value="Sinyal sel">Sinyal sel</option><option value="Hemostasis">Hemostasis dan komponen darah</option></select></div>
+<p class="glossary-count" id="glossaryCount" aria-live="polite"></p><div class="glossary-grid" id="glossaryGrid"></div>
+</div></section>
+<section id="quiz" class="view hide">
+<div class="panel quiz-intro-panel">
+  <div class="section-head"><div><h2>Uji Pemahaman • Coagulation Challenge</h2><p class="sub">Uji penguasaan konsep hemostasis dan coagulation cascade melalui bank soal terkurasi.</p></div><span class="pill quiz-bank-pill">100 SOAL TERSEDIA</span></div>
+  <div class="quiz-highlight-grid">
+    <div class="quiz-highlight"><span class="quiz-highlight-icon">⏱</span><div><b>20 detik</b><small>untuk setiap soal</small></div></div>
+    <div class="quiz-highlight"><span class="quiz-highlight-icon">🎯</span><div><b>Acak otomatis</b><small>soal dan opsi jawaban</small></div></div>
+    <div class="quiz-highlight"><span class="quiz-highlight-icon">🏆</span><div><b>Sertifikat</b><small>setelah tes selesai</small></div></div>
+  </div>
+  <div id="quizIntro" class="quiz-config">
+    <div class="quiz-config-copy"><h3>Siap menguji pemahaman Anda?</h3><p>Setiap sesi mengambil soal secara acak dari 100 soal. Jawaban akan dikunci setelah dipilih. Jika waktu habis, sistem otomatis melanjutkan ke soal berikutnya.</p></div>
+    <div class="quiz-config-fields">
+      <label for="quizStudentName">Nama pada sertifikat</label>
+      <input id="quizStudentName" type="text" maxlength="70" autocomplete="name" placeholder="Masukkan nama lengkap" />
+      <div class="quiz-config-row">
+        <div><label for="quizCount">Jumlah soal per sesi</label><select id="quizCount"><option value="10" selected>10 soal • cepat</option><option value="20">20 soal • standar</option><option value="50">50 soal • mendalam</option><option value="100">100 soal • tantangan penuh</option></select></div>
+        <div><label for="quizLevel">Tingkat kesulitan</label><select id="quizLevel"><option value="Semua" selected>Campuran</option><option value="Dasar">Dasar</option><option value="Menengah">Menengah</option><option value="Lanjut">Lanjut</option></select></div>
+      </div>
+      <button class="btn primary quiz-start-btn" id="quizStartBtn" type="button">Mulai tantangan <span aria-hidden="true">→</span></button>
+      <p class="quiz-config-note">Nilai kelulusan sertifikat pencapaian: <b>70%</b>. Sertifikat penyelesaian tetap tersedia untuk setiap peserta yang menuntaskan sesi.</p>
+    </div>
+  </div>
+</div>
+<div id="quizStage" class="quiz-stage hide" aria-live="polite"></div>
+<div id="quizResult" class="quiz-result hide" aria-live="polite"></div>
+</section>
+<footer>Coagulation Lab • Media belajar interaktif • 100 soal evaluasi acak • Konsep cascade klasik dan konteks fisiologi modern</footer>
+</main>
+<script>
+const paths={
+intrinsic:{label:'JALUR KONTAK',big:'XII → XI → IX',title:'Intrinsic pathway',text:'Model klasik ini menggambarkan aktivasi berurutan faktor koagulasi di dalam plasma. Jalur ini berkaitan dengan pemeriksaan aPTT. Faktor IXa bekerja bersama VIIIa untuk mengaktifkan factor X.',facts:['XII → XIIa → XI → XIa','XIa mengaktifkan IX menjadi IXa','IXa + VIIIa + Ca²⁺ + phospholipid membentuk intrinsic tenase'],steps:[['XII','XIIa','Contact activation memulai rangkaian pada model klasik.'],['XI','XIa','Factor XIIa mengaktifkan factor XI.'],['IX','IXa','Factor XIa mengaktifkan factor IX.'],['VIIIa + IXa','Intrinsic tenase','Cofactor VIIIa membantu IXa mengaktifkan factor X.'],['X','Xa','Factor X aktif menjadi titik temu kedua jalur.']]},
+extrinsic:{label:'JALUR TISSUE FACTOR',big:'TF + VIIa → X',title:'Extrinsic pathway',text:'Kerusakan jaringan membuat tissue factor (TF) berinteraksi dengan factor VII/VIIa. Kompleks TF–VIIa mengaktifkan factor X dan juga factor IX, sehingga menghubungkan jalur inisiasi dengan amplifikasi.',facts:['Cedera jaringan mengekspos tissue factor (TF)','TF berikatan dengan factor VIIa','Kompleks TF–VIIa mengaktifkan X dan IX'],steps:[['TF','Tissue factor terekspos','Kerusakan jaringan mempertemukan TF dengan faktor plasma.'],['VII','VIIa','Factor VII berikatan dengan TF dan menjadi aktif.'],['TF + VIIa','TF–VIIa complex','Kompleks enzimatik terbentuk di permukaan sel pembawa TF.'],['X','Xa','Factor X diaktifkan; jalur masuk ke common pathway.'],['IX','IXa','Aktivasi factor IX ikut mendukung amplifikasi melalui intrinsic tenase.']]},
+common:{label:'TITIK KONVERGENSI',big:'Xa → IIa → Fibrin',title:'Common pathway',text:'Setelah factor X menjadi Xa, jalur berlanjut melalui prothrombinase complex. Thrombin yang terbentuk memotong fibrinogen menjadi fibrin, lalu factor XIIIa membuat cross-link agar bekuan lebih stabil.',facts:['Xa + Va + Ca²⁺ + phospholipid = prothrombinase','Prothrombin (II) → thrombin (IIa)','Fibrinogen (I) → fibrin; XIIIa melakukan cross-link'],steps:[['X','Xa','Factor X aktif bergabung dengan cofactor Va.'],['Xa + Va','Prothrombinase','Dengan Ca²⁺ dan phospholipid, kompleks ini mengubah prothrombin.'],['II','IIa','Prothrombin diubah menjadi thrombin.'],['I','Fibrin','Thrombin memotong fibrinogen menjadi fibrin.'],['XIII','XIIIa','Factor XIIIa melakukan cross-link fibrin sehingga clot stabil.']]}}
+let current='intrinsic',step=0,runTimer=null;
+const $=id=>document.getElementById(id);
+const acronymMap={
+'aPTT':'Activated Partial Thromboplastin Time','PTT':'Partial Thromboplastin Time','PT':'Prothrombin Time','INR':'International Normalized Ratio','TT':'Thrombin Time','TF':'Tissue Factor','vWF':'von Willebrand Factor','VWF':'von Willebrand Factor','ADP':'Adenosine Diphosphate','TXA₂':'Thromboxane A₂','PS':'Phosphatidylserine','NO':'Nitric Oxide','PGI₂':'Prostacyclin','cAMP':'Cyclic Adenosine Monophosphate','cGMP':'Cyclic Guanosine Monophosphate','Ca²⁺':'Calcium Ion','GPVI':'Glycoprotein VI','GPIb-IX-V':'Glycoprotein Ib-IX-V Complex','SFK':'Src Family Kinases','Syk':'Spleen Tyrosine Kinase','PLCγ2':'Phospholipase C Gamma 2','IP₃':'Inositol 1,4,5-Trisphosphate','DAG':'Diacylglycerol','SNARE':'Soluble N-Ethylmaleimide-Sensitive Factor Attachment Protein Receptor','RBC':'Red Blood Cell','PLT':'Platelet','HMWK':'High-Molecular-Weight Kininogen','PK':'Prekallikrein','DIC':'Disseminated Intravascular Coagulation','VKA':'Vitamin K Antagonist','UFH':'Unfractionated Heparin'};
+function expandAcronyms(root=document.body){
+ const keys=Object.keys(acronymMap).sort((a,b)=>b.length-a.length);
+ const re=new RegExp('(?<![A-Za-z0-9])('+keys.map(x=>x.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('|')+')(?![A-Za-z0-9])','g');
+ const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode(n){const p=n.parentElement;if(!p||p.closest('script,style,.acronym-term,.acronym-expansion,.term-card .abbr,.term-card .full'))return NodeFilter.FILTER_REJECT;re.lastIndex=0;return re.test(n.nodeValue)?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT;}});
+ const nodes=[];while(walker.nextNode())nodes.push(walker.currentNode);
+ nodes.forEach(node=>{re.lastIndex=0;const text=node.nodeValue,frag=document.createDocumentFragment();let last=0,m;while((m=re.exec(text))){frag.append(document.createTextNode(text.slice(last,m.index)));const wrap=document.createElement('span');wrap.className='acronym-term';wrap.textContent=m[0];const full=document.createElement('span');full.className='acronym-expansion';full.textContent=acronymMap[m[0]];frag.append(wrap,full);last=m.index+m[0].length;}frag.append(document.createTextNode(text.slice(last)));node.replaceWith(frag);});
+}
+
+function drawPath(){let d=$('pathDiagram'),p=paths[current];let coords=current==='intrinsic'?[[260,25],[260,68],[260,111],[260,154],[260,197]]:current==='extrinsic'?[[260,25],[260,68],[260,111],[160,170],[360,170]]:[[260,25],[260,68],[260,111],[260,154],[260,197]];
+let labels=p.steps.map(s=>s[0]);let svg='';for(let i=0;i<p.steps.length-1;i++){let a=coords[i],b=coords[i+1];svg+=`<path class="flow ${i<step?'active':''}" d="M${a[0]} ${a[1]+13} L${b[0]} ${b[1]-13}"/>`;}
+p.steps.forEach((s,i)=>{let [x,y]=coords[i],cl=i<step?'done':i===step?'active':'';svg+=`<g class="node ${cl}"><rect x="${x-82}" y="${y-15}" width="164" height="30"/><text x="${x}" y="${y-1}">${s[0]}</text><text class="small" x="${x}" y="${y+10}">${s[1]}</text></g>`;});
+if(step>0){let [x,y]=coords[Math.min(step-1,coords.length-1)];svg+=`<circle class="particle" cx="${x}" cy="${y}" r="5"><animate attributeName="r" values="3;7;3" dur=".8s" repeatCount="indefinite"/></circle>`;}
+d.innerHTML=svg;$('storyLabel').textContent=p.label;$('storyBig').textContent=p.big;$('storyTitle').textContent=p.title;$('storyText').textContent=p.text;$('storyFacts').innerHTML=p.facts.map(x=>`<div class="factline"><span class="dot"></span><span>${x}</span></div>`).join('');$('diagramTitle').textContent='Urutan aktivasi • langkah '+Math.min(step+1,5)+' dari 5';$('simStatus').textContent=step===0?'Siap dimulai':step>=5?'Rangkaian selesai':`Langkah ${step} dari 5`; $('simProgress').style.width=(step/5*100)+'%';$('sequence').innerHTML=p.steps.map((s,i)=>`<div class="seq-card" style="${i<step?'border-color:#9ed9c4;background:#f5fcf8':''}"><b>${i+1}. ${s[0]} <span style="color:#8994a8;font-weight:600">→ ${s[1]}</span></b><p>${s[2]}</p></div>`).join('');expandAcronyms($('explore'));}
+const glossaryTerms=[
+['PT','Prothrombin Time','Pemeriksaan waktu pembekuan yang menilai terutama extrinsic pathway dan common pathway.','Pemeriksaan laboratorium'],
+['PTT','Partial Thromboplastin Time','Pemeriksaan waktu pembekuan untuk menilai intrinsic pathway dan common pathway. Metode tanpa aktivator tambahan dapat berbeda dari aPTT.','Pemeriksaan laboratorium'],
+['aPTT','Activated Partial Thromboplastin Time','PTT yang menggunakan aktivator contact pathway, misalnya silica atau kaolin, untuk membuat pemeriksaan lebih terstandar. Menilai intrinsic dan common pathway.','Pemeriksaan laboratorium'],
+['INR','International Normalized Ratio','Rasio PT yang distandardisasi terhadap sensitivitas thromboplastin; terutama digunakan untuk pemantauan vitamin K antagonist seperti warfarin.','Pemeriksaan laboratorium'],
+['TT','Thrombin Time','Mengukur waktu pembentukan clot setelah thrombin ditambahkan ke plasma; menilai tahap konversi fibrinogen menjadi fibrin.','Pemeriksaan laboratorium'],
+['TF','Tissue Factor','Protein membran yang terekspos pada kerusakan jaringan dan berikatan dengan factor VII/VIIa untuk memulai jalur extrinsic.','Molekul dan reseptor'],
+['vWF / VWF','von Willebrand Factor','Protein plasma dan matriks yang membantu platelet menempel pada lokasi cedera melalui interaksi dengan reseptor GPIb.','Molekul dan reseptor'],
+['ADP','Adenosine Diphosphate','Agonis platelet yang dilepaskan dari dense granules dan memperkuat aktivasi serta agregasi platelet melalui reseptor purinergik.','Molekul dan reseptor'],
+['TXA₂','Thromboxane A₂','Eicosanoid yang disintesis platelet teraktivasi; meningkatkan aktivasi platelet dan vasoconstriction melalui reseptor TP.','Molekul dan reseptor'],
+['PS','Phosphatidylserine','Fosfolipid anionik yang terekspos pada permukaan platelet teraktivasi dan menyediakan permukaan bagi kompleks koagulasi.','Hemostasis'],
+['NO','Nitric Oxide','Mediator endotel yang meningkatkan cGMP pada platelet dan menghambat aktivasi platelet.','Sinyal sel'],
+['PGI₂','Prostacyclin','Mediator endotel yang meningkatkan cAMP pada platelet dan menekan aktivasi serta agregasi platelet.','Sinyal sel'],
+['cAMP','Cyclic Adenosine Monophosphate','Second messenger yang meningkat akibat aktivasi adenylate cyclase; berperan menghambat aktivasi platelet.','Sinyal sel'],
+['cGMP','Cyclic Guanosine Monophosphate','Second messenger yang dibentuk melalui guanylate cyclase; berperan dalam efek antiplatelet NO.','Sinyal sel'],
+['Ca²⁺','Calcium Ion','Ion yang diperlukan dalam berbagai tahap koagulasi, termasuk interaksi faktor dengan permukaan fosfolipid. Disebut juga factor IV dalam nomenklatur klasik.','Faktor koagulasi'],
+['GPVI','Glycoprotein VI','Reseptor platelet untuk collagen yang memicu intracellular signaling dan aktivasi platelet.','Molekul dan reseptor'],
+['GPIb-IX-V','Glycoprotein Ib-IX-V Complex','Kompleks reseptor platelet yang berikatan dengan vWF dan berperan penting dalam platelet adhesion.','Molekul dan reseptor'],
+['αIIbβ3','Integrin alpha-IIb beta-3','Reseptor platelet yang aktif mengikat fibrinogen sehingga membentuk jembatan antartrombosit pada agregasi. Juga dikenal sebagai GPIIb/IIIa.','Molekul dan reseptor'],
+['PAR1/PAR4','Protease-Activated Receptors 1 and 4','Reseptor platelet yang diaktifkan thrombin dan meneruskan sinyal aktivasi platelet.','Molekul dan reseptor'],
+['SFK','Src Family Kinases','Keluarga protein tyrosine kinases yang terlibat dalam transduksi sinyal setelah interaksi reseptor platelet.','Sinyal sel'],
+['Syk','Spleen Tyrosine Kinase','Protein tyrosine kinase yang meneruskan sinyal aktivasi platelet, termasuk downstream dari GPVI.','Sinyal sel'],
+['PLCγ2','Phospholipase C Gamma 2','Enzim sinyal yang menghasilkan IP₃ dan DAG dari phosphoinositides; berkontribusi pada peningkatan Ca²⁺ intraseluler.','Sinyal sel'],
+['IP₃','Inositol 1,4,5-Trisphosphate','Second messenger yang memicu pelepasan Ca²⁺ dari intracellular stores.','Sinyal sel'],
+['DAG','Diacylglycerol','Second messenger yang membantu aktivasi protein kinase C dalam jalur aktivasi sel.','Sinyal sel'],
+['SNARE','Soluble N-Ethylmaleimide-Sensitive Factor Attachment Protein Receptor','Kompleks protein yang membantu fusi granula dengan membran dan pelepasan isi granula platelet.','Sinyal sel'],
+['RBC','Red Blood Cell','Sel darah merah atau eritrosit; berkontribusi pada rheology darah dan distribusi platelet di sekitar dinding pembuluh.','Hemostasis'],
+['PLT','Platelet','Trombosit; fragmen sel yang berperan dalam primary hemostasis dan menyediakan permukaan prokoagulan.','Hemostasis'],
+['Fibrinogen (I)','Coagulation Factor I','Protein plasma larut yang dipotong oleh thrombin menjadi fibrin.','Faktor koagulasi'],
+['Prothrombin (II)','Coagulation Factor II','Zymogen yang diubah oleh prothrombinase menjadi thrombin (IIa).','Faktor koagulasi'],
+['Thrombin (IIa)','Activated Factor II','Protease yang mengubah fibrinogen menjadi fibrin dan mengaktifkan beberapa faktor koagulasi serta platelet.','Faktor koagulasi'],
+['Xa','Activated Factor X','Protease yang bersama factor Va membentuk prothrombinase complex.','Faktor koagulasi'],
+['XIIIa','Activated Factor XIII','Transglutaminase yang melakukan cross-link fibrin untuk menstabilkan clot.','Faktor koagulasi'],
+['HMWK','High-Molecular-Weight Kininogen','Cofactor pada contact activation system yang membantu interaksi komponen seperti factor XII dan prekallikrein.','Faktor koagulasi'],
+['PK','Prekallikrein','Zymogen plasma pada contact activation system yang dapat diubah menjadi kallikrein.','Faktor koagulasi'],
+['DIC','Disseminated Intravascular Coagulation','Kondisi patologis berupa aktivasi koagulasi sistemik yang dapat menyebabkan pembentukan microthrombi dan konsumsi platelet/faktor koagulasi.','Hemostasis'],
+['VKA','Vitamin K Antagonist','Kelompok antikoagulan yang menghambat siklus vitamin K; warfarin merupakan salah satu contohnya.','Hemostasis'],
+['UFH','Unfractionated Heparin','Antikoagulan yang meningkatkan aktivitas antithrombin; efeknya sering dipantau menggunakan aPTT atau anti-Xa sesuai konteks.','Hemostasis']
+];
+function renderGlossary(){const q=($('glossarySearch')?.value||'').toLowerCase().trim();const cat=$('glossaryCategory')?.value||'all';const filtered=glossaryTerms.filter(t=>(cat==='all'||t[3]===cat)&&t.slice(0,4).join(' ').toLowerCase().includes(q));$('glossaryCount').textContent=`Menampilkan ${filtered.length} dari ${glossaryTerms.length} istilah`; $('glossaryGrid').innerHTML=filtered.map(t=>`<article class="term-card"><div class="category">${t[3]}</div><div class="abbr">${t[0]}</div><div class="full">${t[1]}</div><p>${t[2]}</p></article>`).join('')||'<p class="sub">Istilah tidak ditemukan. Coba kata kunci lain.</p>';}
+
+
+function nextStep(){if(step<5){step++;drawPath();}if(step>=5)stopRun();}
+
+$('glossarySearch').addEventListener('input',renderGlossary);$('glossaryCategory').addEventListener('change',renderGlossary);renderGlossary();
+function stopRun(){if(runTimer){clearInterval(runTimer);runTimer=null;}$('playBtn').textContent='▶ Putar ulang';}
+function reset(){stopRun();step=0;drawPath();$('playBtn').textContent='▶ Putar animasi';}
+function play(){if(step>=5)reset();if(runTimer)return;$('playBtn').textContent='Ⅱ Jeda animasi';runTimer=setInterval(()=>{if(step>=5){stopRun();return;}nextStep();},1050);}
+$('playBtn').addEventListener('click',()=>{if(runTimer){stopRun();$('playBtn').textContent='▶ Lanjutkan animasi';}else play();});
+$('stepBtn').addEventListener('click',()=>{if(runTimer)stopRun();nextStep();$('playBtn').textContent=step>=5?'▶ Putar ulang':'▶ Lanjutkan animasi';});
+$('resetBtn').addEventListener('click',reset);
+document.querySelectorAll('[data-path]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-path]').forEach(x=>x.classList.remove('active'));b.classList.add('active');current=b.dataset.path;reset();}));
+document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>{if(b.dataset.view!=='quiz')pauseQuizForNavigation();document.querySelectorAll('[data-view]').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.querySelectorAll('.view').forEach(x=>x.classList.add('hide'));$(b.dataset.view).classList.remove('hide');if(b.dataset.view==='quiz')resumeQuizForNavigation();}));
+function Q(q,a,b,c,d,correct,explanation,level='Dasar'){
+  return {q, options:[a,b,c,d], answer:correct, explanation, level};
+}
+const quizBank = [
+Q('Apa tujuan utama hemostasis setelah pembuluh darah mengalami cedera?','Menghentikan perdarahan sambil mempertahankan aliran darah pada jaringan lain','Menghancurkan seluruh eritrosit di sekitar luka','Mengubah semua protein plasma menjadi fibrin','Menghambat seluruh aktivitas platelet',0,'Hemostasis membatasi kehilangan darah melalui vasoconstriction, pembentukan platelet plug, dan stabilisasi clot.', 'Dasar'),
+Q('Urutan proses hemostasis yang paling tepat adalah…','Fibrinolysis → platelet adhesion → vasoconstriction','Vasoconstriction → primary hemostasis → secondary hemostasis','Secondary hemostasis → vasodilation → fibrinolysis','Platelet aggregation → fibrinolysis → vasoconstriction',1,'Respons awal meliputi vasoconstriction, diikuti primary hemostasis dan penguatan oleh secondary hemostasis.', 'Dasar'),
+Q('Primary hemostasis terutama melibatkan…','Pembentukan fibrin oleh factor XIIIa','Aktivasi plasminogen menjadi plasmin','Adhesion, activation, dan aggregation platelet','Konversi prothrombin menjadi thrombin',2,'Primary hemostasis membentuk platelet plug melalui adhesion, activation, dan aggregation.', 'Dasar'),
+Q('Secondary hemostasis terutama menghasilkan…','Platelet plug tanpa fibrin','Vasodilation menetap','Degradasi fibrin','Fibrin yang menstabilkan platelet plug',3,'Secondary hemostasis menghasilkan thrombin dan fibrin yang memperkuat platelet plug.', 'Dasar'),
+Q('Protein plasma yang menjembatani collagen subendothelial dengan platelet GPIb adalah…','von Willebrand factor (vWF)','Albumin','Antithrombin','Plasminogen',0,'vWF menempel pada struktur subendothelial dan berikatan dengan kompleks GPIb-IX-V platelet.', 'Dasar'),
+Q('Reseptor platelet yang terutama berikatan dengan vWF saat platelet adhesion adalah…','GPVI','GPIb-IX-V','αIIbβ3','PAR1',1,'Kompleks GPIb-IX-V memediasi penangkapan dan adhesion platelet melalui vWF.', 'Dasar'),
+Q('Reseptor platelet yang berikatan dengan collagen dan menginisiasi signaling adalah…','GPIb','P2Y12','GPVI','TP receptor',2,'GPVI merupakan receptor utama platelet untuk collagen dan menginisiasi signaling aktivasi.', 'Dasar'),
+Q('Agregasi platelet terutama dimediasi oleh ikatan fibrinogen dengan…','GPIb-IX-V','GPVI','PAR4','αIIbβ3 (GPIIb/IIIa)',3,'Integrin aktif αIIbβ3 mengikat fibrinogen yang menjembatani platelet satu dengan lainnya.', 'Dasar'),
+Q('Mediator yang dilepaskan dense granules dan memperkuat aktivasi platelet adalah…','ADP','Albumin','Fibrinogen','Antithrombin',0,'ADP mengaktivasi reseptor purinergik, termasuk P2Y12, dan memperkuat aktivasi serta agregasi platelet.', 'Dasar'),
+Q('Thromboxane A₂ (TXA₂) pada platelet terutama berfungsi untuk…','Menghambat seluruh aktivasi platelet','Memperkuat aktivasi platelet dan vasoconstriction','Mengubah fibrin menjadi fibrin degradation products','Menghambat sintesis thrombin',1,'TXA₂ memperkuat recruitment dan activation platelet serta menyebabkan vasoconstriction.', 'Dasar'),
+Q('Mediator endotel yang cenderung menghambat aktivasi platelet melalui peningkatan cGMP adalah…','ADP','TXA₂','Nitric oxide (NO)','Thrombin',2,'NO mengaktifkan soluble guanylate cyclase dan meningkatkan cGMP pada platelet.', 'Dasar'),
+Q('Prostacyclin (PGI₂) menghambat agregasi platelet terutama melalui peningkatan…','IP₃','DAG','cGMP','cAMP',3,'PGI₂ mengaktivasi adenylate cyclase sehingga meningkatkan cAMP dan menekan aktivasi platelet.', 'Dasar'),
+Q('Apa fungsi utama calcium ion (Ca²⁺) dalam coagulation cascade?','Membantu interaksi faktor koagulasi dengan permukaan fosfolipid','Memecah fibrin secara langsung','Menghambat pembentukan intrinsic tenase','Mengubah platelet menjadi eritrosit',0,'Ca²⁺ membantu sejumlah faktor koagulasi berinteraksi dengan membran fosfolipid bermuatan negatif.', 'Dasar'),
+Q('Permukaan prokoagulan platelet teraktivasi terutama terbentuk karena eksposur…','Cholesterol','Phosphatidylserine (PS)','Glycogen','Hemoglobin',1,'Eksposur PS menyediakan permukaan bermuatan negatif untuk perakitan kompleks tenase dan prothrombinase.', 'Menengah'),
+Q('Model cascade klasik membagi jalur koagulasi menjadi…','Platelet, endothelial, dan fibrinolytic pathway','Arterial dan venous pathway','Intrinsic, extrinsic, dan common pathway','Portal dan systemic pathway',2,'Pembagian klasik digunakan luas untuk pembelajaran serta interpretasi PT dan aPTT.', 'Dasar'),
+Q('Kompleks yang menginisiasi extrinsic pathway adalah…','Intrinsic tenase','Prothrombinase','Factor IXa–VIIIa','Tissue factor–factor VIIa',3,'Tissue factor (TF) berikatan dengan factor VII/VIIa dan membentuk kompleks inisiasi extrinsic pathway.', 'Dasar'),
+Q('Tissue factor (TF) dalam kondisi normal terutama berada…','Pada sel subendothelial/perivascular dan tidak terpapar langsung ke darah','Terlarut bebas dalam plasma pada konsentrasi tinggi','Di dalam eritrosit matang','Sebagai bagian dari fibrin clot normal',0,'TF umumnya terpisah dari darah oleh lapisan endotel; cedera atau aktivasi patologis dapat mempertemukannya dengan factor VII/VIIa.', 'Menengah'),
+Q('Kompleks TF–VIIa dapat mengaktifkan…','Hanya factor XIII','Factor X dan factor IX','Hanya fibrinogen','Plasminogen dan antithrombin',1,'TF–VIIa mengaktifkan factor X dan juga factor IX, menghubungkan inisiasi dengan amplifikasi.', 'Menengah'),
+Q('Faktor koagulasi yang menjadi zymogen utama pada awal extrinsic pathway adalah…','Factor XII','Factor XI','Factor VII','Factor XIII',2,'Factor VII berikatan dengan TF dan kemudian diaktifkan menjadi VIIa.', 'Dasar'),
+Q('Intrinsic pathway pada model klasik dimulai dengan aktivasi…','Factor VII','Factor X','Factor V','Factor XII',3,'Contact activation pada model klasik melibatkan factor XII, prekallikrein, dan HMWK.', 'Dasar'),
+Q('Urutan aktivasi utama intrinsic pathway pada model klasik adalah…','XII → XI → IX','VII → IX → X','X → V → II','XIII → I → II',0,'Rangkaian klasik adalah XII menjadi XIIa, XI menjadi XIa, lalu IX menjadi IXa.', 'Dasar'),
+Q('Factor XIIa mengaktifkan factor…','VIII','XI','V','XIII',1,'Factor XIIa mengaktifkan factor XI menjadi XIa pada model klasik.', 'Dasar'),
+Q('Factor XIa selanjutnya mengaktifkan…','Factor VII','Factor VIII','Factor IX','Factor XIII',2,'Factor XIa mengaktifkan factor IX menjadi IXa.', 'Dasar'),
+Q('Kompleks intrinsic tenase tersusun terutama atas…','Xa dan Va','TF dan VIIa','Thrombin dan fibrinogen','IXa dan VIIIa',3,'Intrinsic tenase terdiri dari factor IXa sebagai enzyme dan factor VIIIa sebagai cofactor, dengan Ca²⁺ serta fosfolipid.', 'Dasar'),
+Q('Fungsi utama intrinsic tenase adalah…','Mengaktifkan factor X menjadi Xa','Mengubah fibrinogen menjadi fibrin','Menghambat thrombin','Mengaktifkan plasminogen',0,'Intrinsic tenase mengkatalisis aktivasi factor X menjadi Xa.', 'Menengah'),
+Q('Factor VIIIa berperan dalam intrinsic tenase sebagai…','Protease utama','Cofactor bagi factor IXa','Inhibitor factor X','Substrat thrombin',1,'Factor VIIIa meningkatkan efisiensi katalitik factor IXa dalam mengaktifkan factor X.', 'Menengah'),
+Q('Hemophilia A secara klasik berkaitan dengan defisiensi…','Factor IX','Factor XI','Factor VIII','Factor VII',2,'Hemophilia A disebabkan defisiensi atau disfungsi factor VIII.', 'Dasar'),
+Q('Hemophilia B secara klasik berkaitan dengan defisiensi…','Factor VIII','Factor V','Factor XI','Factor IX',3,'Hemophilia B disebabkan defisiensi atau disfungsi factor IX.', 'Dasar'),
+Q('Defisiensi factor XII dapat memanjangkan aPTT, tetapi umumnya…','Tidak menyebabkan kecenderungan perdarahan klinis yang khas','Menimbulkan hemarthrosis berat seperti hemophilia A','Menghilangkan produksi fibrinogen','Selalu menyebabkan DIC',0,'Defisiensi factor XII dapat memanjangkan aPTT secara nyata tanpa fenotipe perdarahan yang sebanding.', 'Lanjut'),
+Q('Faktor yang menjadi titik konvergensi intrinsic dan extrinsic pathway adalah…','Factor V','Factor X','Factor II','Factor XIII',1,'Kedua jalur mengarah pada aktivasi factor X menjadi Xa.', 'Dasar'),
+Q('Extrinsic pathway secara laboratorium terutama dievaluasi menggunakan…','Bleeding time','Thrombin time','Prothrombin time (PT)','Platelet count',2,'PT mengevaluasi extrinsic dan common pathway, dengan sensitivitas utama terhadap factor VII dan faktor common pathway.', 'Dasar'),
+Q('aPTT terutama mengevaluasi…','Extrinsic pathway saja','Fibrinolysis saja','Fungsi platelet adhesion','Intrinsic dan common pathway',3,'aPTT menguji intrinsic serta common pathway melalui aktivasi contact pathway dalam pemeriksaan.', 'Dasar'),
+Q('Common pathway dimulai ketika factor X diaktifkan menjadi…','Xa','XIa','VIIa','XIIIa',0,'Factor Xa merupakan protease kunci pada common pathway.', 'Dasar'),
+Q('Kompleks prothrombinase dibentuk oleh…','IXa + VIIIa','Xa + Va + Ca²⁺ + phospholipid','TF + VIIa + fibrin','XIIIa + fibrinogen',1,'Prothrombinase terdiri dari Xa dan cofactor Va pada permukaan fosfolipid dengan bantuan Ca²⁺.', 'Dasar'),
+Q('Reaksi utama yang dikatalisis oleh prothrombinase adalah…','Fibrin menjadi fibrin degradation products','Factor XIII menjadi XIIIa','Prothrombin (II) menjadi thrombin (IIa)','Plasminogen menjadi plasmin',2,'Prothrombinase mengubah prothrombin menjadi thrombin.', 'Dasar'),
+Q('Thrombin juga dikenal sebagai…','Factor X','Factor VIIa','Factor XIIIa','Factor IIa',3,'Thrombin adalah bentuk aktif prothrombin, yang disebut factor IIa.', 'Dasar'),
+Q('Fungsi utama thrombin dalam pembentukan clot adalah…','Memotong fibrinogen menjadi fibrin','Mengubah fibrin menjadi plasmin','Menghambat factor XIII','Menghancurkan platelet plug',0,'Thrombin memotong fibrinopeptide dari fibrinogen sehingga terbentuk monomer fibrin.', 'Dasar'),
+Q('Fibrinogen dalam nomenklatur faktor koagulasi dikenal sebagai…','Factor II','Factor I','Factor V','Factor X',1,'Fibrinogen merupakan coagulation factor I.', 'Dasar'),
+Q('Fibrinogen terutama diproduksi oleh…','Platelet','Endotel','Hepatocytes','Eritrosit',2,'Fibrinogen merupakan protein plasma yang terutama disintesis di hati.', 'Dasar'),
+Q('Factor XIII diaktifkan oleh thrombin menjadi…','XIIIa','XIIa','Xa','IXa',0,'Thrombin dengan bantuan Ca²⁺ mengaktifkan factor XIII menjadi XIIIa.', 'Menengah'),
+Q('Fungsi factor XIIIa adalah…','Mengubah prothrombin menjadi thrombin','Mengaktifkan factor VII','Memecah fibrin','Melakukan cross-link fibrin agar clot stabil',3,'Factor XIIIa adalah transglutaminase yang membentuk ikatan silang kovalen antarserat fibrin.', 'Dasar'),
+Q('Tanpa cross-linking oleh factor XIIIa, fibrin clot cenderung…','Lebih stabil terhadap lisis','Kurang stabil dan lebih mudah terurai','Tidak dapat mengandung fibrinogen','Mengaktifkan platelet secara permanen',1,'Cross-linking oleh XIIIa meningkatkan kekuatan mekanik dan resistensi fibrin clot terhadap fibrinolysis.', 'Menengah'),
+Q('Thrombin dapat memperkuat coagulation cascade dengan mengaktifkan…','Factor VIII, factor V, factor XI, dan platelet','Hanya factor XII','Hanya factor VII','Hanya plasminogen',0,'Thrombin berperan sebagai amplifier dengan mengaktifkan beberapa cofactors dan platelet.', 'Menengah'),
+Q('Dalam model cell-based coagulation, fase propagation ditandai terutama oleh…','Pembentukan albumin','Inhibisi total thrombin','Burst thrombin pada permukaan platelet teraktivasi','Degradasi seluruh fibrin',2,'Pada propagation, kompleks tenase dan prothrombinase pada platelet menghasilkan thrombin dalam jumlah besar.', 'Lanjut'),
+Q('Mengapa cascade klasik tidak sepenuhnya menggambarkan koagulasi in vivo?','Karena faktor koagulasi tidak terdapat di plasma','Karena fibrin tidak terbentuk di tubuh','Karena platelet tidak berperan dalam koagulasi','Karena koagulasi in vivo berlangsung terkoordinasi pada cell surfaces dan diinisiasi TF',3,'Model cell-based menekankan inisiasi oleh TF, amplifikasi, dan propagation pada permukaan sel/platelet.', 'Lanjut'),
+Q('Istilah “thrombin burst” merujuk pada…','Peningkatan cepat produksi thrombin selama fase propagation','Penurunan fibrinogen secara fisiologis','Pelepasan eritrosit dari clot','Aktivasi plasmin oleh tPA',0,'Thrombin burst adalah produksi thrombin dalam jumlah besar setelah kompleks koagulasi tersusun pada permukaan platelet.', 'Menengah'),
+Q('Fungsi utama antithrombin adalah…','Mengaktifkan factor X','Menghambat thrombin dan beberapa activated coagulation factors','Mengubah fibrinogen menjadi fibrin','Mengaktifkan platelet',1,'Antithrombin menghambat thrombin serta factor Xa dan sejumlah protease koagulasi lainnya.', 'Menengah'),
+Q('Protein C aktif (activated protein C) bersama protein S terutama…','Mengaktifkan factor XII','Mengubah plasminogen menjadi plasmin','Menginaktivasi factor Va dan VIIIa','Membentuk cross-link fibrin',2,'Activated protein C dengan protein S memutus aktivitas cofactor Va dan VIIIa, membatasi koagulasi.', 'Menengah'),
+Q('Tissue factor pathway inhibitor (TFPI) terutama menghambat…','Fibrinogen','Factor XIIIa','Plasmin','Factor Xa dan kompleks TF–VIIa',3,'TFPI menghambat Xa dan kemudian kompleks TF–VIIa, membatasi inisiasi extrinsic pathway.', 'Lanjut'),
+Q('Fibrinolysis terutama bertujuan untuk…','Menguraikan fibrin clot setelah kebutuhan hemostasis berkurang','Mengaktifkan platelet baru','Meningkatkan produksi factor VII','Membentuk prothrombinase',0,'Fibrinolysis membatasi dan menghilangkan fibrin clot melalui plasmin.', 'Dasar'),
+Q('Enzim utama yang mendegradasi fibrin adalah…','Thrombin','Plasmin','Factor Xa','Kallikrein',1,'Plasmin memecah fibrin menjadi fibrin degradation products.', 'Dasar'),
+Q('Tissue plasminogen activator (tPA) berfungsi mengubah…','Fibrin menjadi fibrinogen','Thrombin menjadi prothrombin','Plasminogen menjadi plasmin','Factor XIII menjadi XIIIa',2,'tPA mengaktivasi plasminogen menjadi plasmin, terutama pada permukaan fibrin.', 'Dasar'),
+Q('D-dimer terbentuk dari degradasi…','Fibrinogen bebas oleh thrombin','Platelet oleh plasmin','Kolagen subendothelial','Cross-linked fibrin oleh plasmin',3,'D-dimer merupakan produk degradasi fibrin yang telah mengalami cross-linking oleh factor XIIIa.', 'Menengah'),
+Q('PT dalam praktik laboratorium terutama dipengaruhi oleh…','Factor VII dan faktor common pathway','Factor XII saja','Fungsi GPIb saja','Konsentrasi hemoglobin',0,'PT sensitif terhadap factor VII serta faktor common pathway (X, V, II, dan fibrinogen).', 'Menengah'),
+Q('aPTT yang memanjang dengan PT normal paling sesuai mengarahkan evaluasi awal pada…','Defisiensi factor VII terisolasi','Intrinsic pathway factors atau inhibitor yang relevan','Defisiensi factor XIII saja','Gangguan fungsi eritrosit',1,'Pola isolated prolonged aPTT dapat terkait defisiensi faktor intrinsic, heparin, atau inhibitor; perlu konteks klinis dan pemeriksaan lanjutan.', 'Menengah'),
+Q('PT memanjang dengan aPTT normal dapat ditemukan pada defisiensi…','Factor VIII','Factor IX','Factor VII','Factor XII',2,'Factor VII termasuk extrinsic pathway dan dapat memanjangkan PT secara terisolasi.', 'Menengah'),
+Q('PT dan aPTT sama-sama memanjang dapat terjadi pada…','Defisiensi factor VII ringan saja','Defisiensi factor VIII ringan saja','Gangguan GPIb terisolasi','Defisiensi faktor common pathway atau gangguan koagulasi sistemik',3,'Gangguan factor X, V, II, fibrinogen, atau kondisi sistemik tertentu dapat memanjangkan kedua tes.', 'Menengah'),
+Q('INR merupakan standardisasi hasil dari…','Prothrombin time (PT)','aPTT','Thrombin time','Bleeding time',0,'INR menstandarkan PT berdasarkan sensitivitas thromboplastin dan digunakan terutama untuk pemantauan VKA.', 'Dasar'),
+Q('INR paling umum digunakan untuk memantau terapi…','Unfractionated heparin','Vitamin K antagonist seperti warfarin','Aspirin','Clopidogrel',1,'Warfarin dan VKA lain memengaruhi faktor vitamin K-dependent dan dipantau menggunakan PT/INR.', 'Dasar'),
+Q('Thrombin time (TT) mengevaluasi terutama…','Aktivasi factor XII','Fungsi factor VII','Konversi fibrinogen menjadi fibrin setelah penambahan thrombin','Adhesion platelet ke collagen',2,'TT mengukur waktu pembentukan clot setelah thrombin ditambahkan ke plasma, sehingga menilai tahap fibrinogen-fibrin.', 'Menengah'),
+Q('PTT dan aPTT perlu dibedakan karena…','PTT selalu mengukur extrinsic pathway','PTT tidak pernah digunakan di laboratorium','aPTT tidak melibatkan factor XII','aPTT menggunakan activator contact pathway untuk standardisasi, sedangkan PTT tanpa activator dapat berbeda',3,'aPTT adalah activated PTT; istilah PTT kadang digunakan longgar, tetapi metode pemeriksaan tidak selalu identik.', 'Lanjut'),
+Q('Unfractionated heparin (UFH) meningkatkan aktivitas…','Antithrombin','Protein C','Factor XIII','Tissue factor',0,'UFH berikatan dengan antithrombin dan mempercepat inhibisi thrombin serta Xa.', 'Menengah'),
+Q('Pemantauan UFH secara konvensional sering menggunakan…','PT/INR','aPTT atau anti-Xa sesuai protokol klinis','D-dimer saja','Bleeding time',1,'aPTT atau anti-Xa dapat digunakan untuk memantau UFH, bergantung protokol, kondisi pasien, dan karakteristik assay.', 'Menengah'),
+Q('Warfarin menghambat…','Aktivasi platelet melalui P2Y12','Sintesis fibrin oleh thrombin secara langsung','Vitamin K epoxide reductase','Factor XIIIa secara selektif',2,'Warfarin menghambat VKORC1, mengurangi regenerasi vitamin K tereduksi untuk γ-carboxylation faktor II, VII, IX, dan X serta protein C/S.', 'Lanjut'),
+Q('Faktor koagulasi yang vitamin K-dependent adalah…','I, V, VIII, XIII','VIII, XI, XII, XIII','V, VIII, XI, XII','II, VII, IX, X',3,'Faktor II, VII, IX, dan X serta protein C dan S memerlukan vitamin K untuk γ-carboxylation.', 'Menengah'),
+Q('Aspirin menurunkan aktivasi platelet terutama dengan menghambat…','Cyclooxygenase-1 (COX-1) secara irreversibel','P2Y12 secara reversibel','GPIb secara langsung','Factor Xa',0,'Aspirin mengasetilasi COX-1 platelet secara irreversibel sehingga sintesis TXA₂ berkurang.', 'Menengah'),
+Q('Clopidogrel menghambat platelet melalui antagonisme reseptor…','GPVI','P2Y12','GPIb','PAR1',1,'Clopidogrel adalah inhibitor reseptor ADP P2Y12 yang menurunkan aktivasi dan agregasi platelet.', 'Dasar'),
+Q('Defisiensi vitamin K dapat menurunkan aktivitas faktor…','I, V, VIII, XIII','VIII, IX, XI, XII','II, VII, IX, X','V, VIII, XI, XIII',2,'Vitamin K diperlukan untuk γ-carboxylation factor II, VII, IX, dan X serta protein C dan S.', 'Menengah'),
+Q('Hati berperan penting dalam koagulasi karena…','Hanya menyimpan platelet','Memproduksi seluruh komponen endotel','Menjadi tempat pembentukan fibrin clot di pembuluh','Mensintesis sebagian besar protein koagulasi plasma',3,'Hepatocytes menyintesis sebagian besar faktor koagulasi dan inhibitor plasma, termasuk fibrinogen.', 'Dasar'),
+Q('Disseminated intravascular coagulation (DIC) dapat menyebabkan…','Aktivasi koagulasi sistemik, microthrombi, dan konsumsi faktor/platelet','Hanya peningkatan platelet tanpa perubahan lain','Isolated prolonged PT karena factor VII defisiensi bawaan','Tidak ada risiko perdarahan',0,'DIC melibatkan pembentukan fibrin sistemik dan konsumsi platelet serta faktor koagulasi, sehingga trombosis dan perdarahan dapat terjadi.', 'Lanjut'),
+Q('Pada DIC, D-dimer umumnya…','Selalu normal','Meningkat akibat pembentukan dan degradasi fibrin','Menjadi tidak terdeteksi karena fibrinolysis berhenti','Mengukur jumlah platelet secara langsung',1,'Peningkatan fibrin turnover pada DIC sering meningkatkan D-dimer, tetapi interpretasi harus berdasarkan konteks klinis.', 'Menengah'),
+Q('Thrombocytopenia terutama memengaruhi…','Common pathway','Aktivitas factor VII saja','Primary hemostasis','Sintesis fibrinogen di hati saja',2,'Jumlah platelet yang rendah mengganggu pembentukan platelet plug dan terutama berdampak pada primary hemostasis.', 'Dasar'),
+Q('Gangguan platelet function dapat terjadi meskipun…','Semua faktor koagulasi tidak ada','Fibrinogen selalu nol','PT dan aPTT pasti memanjang','Jumlah platelet normal',3,'Gangguan fungsi platelet dapat terjadi dengan platelet count, PT, dan aPTT yang normal.', 'Menengah'),
+Q('Pola perdarahan mukokutan seperti petechiae dan epistaxis lebih sering mengarahkan pada masalah…','Primary hemostasis/platelet','Factor XIII saja','Fibrinolysis terisolasi','Extrinsic pathway saja',0,'Perdarahan mukokutan sering berhubungan dengan thrombocytopenia atau platelet dysfunction, meskipun tidak spesifik.', 'Menengah'),
+Q('Hemarthrosis berulang lebih khas ditemukan pada…','Gangguan platelet ringan','Defisiensi faktor koagulasi seperti hemophilia','Defisiensi vWF ringan saja','Isolated thrombocytopenia',1,'Deep tissue bleeding dan hemarthrosis klasik pada defisiensi faktor koagulasi berat seperti hemophilia.', 'Menengah'),
+Q('Pada in vivo coagulation, sel pembawa TF membantu menyediakan…','Tempat degradasi fibrin','Sumber utama plasmin','Permukaan untuk inisiasi pembentukan thrombin','Sumber vWF platelet',2,'TF-bearing cells memulai proses melalui TF–VIIa; amplifikasi dan propagation melibatkan platelet serta permukaan sel.', 'Lanjut'),
+Q('Mengapa platelet teraktivasi penting untuk secondary hemostasis?','Platelet menggantikan seluruh faktor plasma','Platelet mengubah eritrosit menjadi fibrin','Platelet menonaktifkan thrombin','Permukaannya mendukung perakitan kompleks tenase dan prothrombinase',3,'Membran platelet dengan eksposur PS memusatkan faktor dan meningkatkan efisiensi pembentukan thrombin.', 'Menengah'),
+Q('Faktor koagulasi umumnya beredar di plasma sebagai…','Zymogens atau procofactors yang diaktifkan sesuai kebutuhan','Enzim aktif permanen','Komponen membran eritrosit','Antibodi spesifik',0,'Banyak faktor koagulasi beredar sebagai zymogen yang diaktifkan secara proteolitik pada lokasi hemostasis.', 'Menengah'),
+Q('Notasi “a” pada faktor seperti IXa atau Xa menunjukkan…','Faktor tersebut telah mengalami degradasi','Bentuk aktif dari faktor koagulasi terkait','Faktor tersebut tidak memerlukan calcium','Faktor tersebut hanya terdapat di hati',1,'Huruf “a” menandakan activated factor, misalnya factor X menjadi factor Xa.', 'Dasar'),
+Q('Mengapa pembentukan thrombin perlu dikendalikan secara ketat?','Thrombin hanya berfungsi dalam fibrinolysis','Thrombin tidak berinteraksi dengan platelet','Aktivasi berlebihan dapat memicu thrombosis dan konsumsi faktor','Thrombin tidak dapat dibentuk di sirkulasi',2,'Koagulasi harus terlokalisasi; aktivasi thrombin berlebihan meningkatkan risiko thrombosis dan gangguan konsumsi faktor.', 'Lanjut'),
+Q('Pada pemeriksaan PT, reagent utama umumnya mengandung…','ADP dan collagen','Thrombin dan plasmin','vWF dan ristocetin','Tissue factor (thromboplastin), phospholipid, dan calcium',3,'PT dimulai dengan penambahan thromboplastin/tissue factor, phospholipid, dan calcium pada plasma sitrat.', 'Menengah'),
+Q('Pada pemeriksaan aPTT, aktivator contact pathway umumnya berupa…','Silica atau kaolin','Tissue factor konsentrasi tinggi','ADP','Ristocetin',0,'aPTT menggunakan contact activator seperti silica atau kaolin bersama phospholipid, kemudian calcium.', 'Menengah'),
+Q('Plasma sitrat digunakan dalam pemeriksaan koagulasi karena citrate…','Mengaktifkan thrombin','Mengikat calcium secara reversibel','Menghancurkan factor VII','Mengubah fibrinogen menjadi fibrin',1,'Citrate mengikat Ca²⁺ sehingga koagulasi tertahan selama pengambilan dan pemrosesan sampel; calcium ditambahkan kembali saat assay.', 'Menengah'),
+Q('Mengapa tabung sitrat untuk pemeriksaan koagulasi harus diisi sesuai volume yang ditetapkan?','Agar jumlah platelet meningkat','Agar konsentrasi fibrinogen bertambah','Untuk mempertahankan rasio darah terhadap citrate yang tepat','Untuk mencegah hemolysis melalui pemanasan',2,'Rasio darah:citrate yang tidak tepat dapat mengubah calcium availability dan menghasilkan hasil PT/aPTT yang bias.', 'Lanjut'),
+Q('Sampel dengan hematocrit sangat tinggi dapat memengaruhi hasil tes koagulasi karena…','Mengaktifkan factor XIII secara langsung','Meningkatkan jumlah plasma','Mengubah struktur fibrinogen','Volume plasma relatif rendah sehingga rasio citrate dapat menjadi berlebihan',3,'Pada hematocrit sangat tinggi, penyesuaian citrate mungkin diperlukan untuk mencegah kelebihan citrate relatif terhadap plasma.', 'Lanjut'),
+Q('Pemeriksaan platelet count normal tidak menyingkirkan…','Platelet function disorder','Seluruh kelainan koagulasi','Defisiensi fibrinogen berat dengan pasti','DIC pada semua fase',0,'Platelet count mengukur jumlah, bukan seluruh aspek fungsi platelet.', 'Menengah'),
+Q('Isolated prolonged PT dapat dijumpai pada fase awal defisiensi vitamin K karena factor yang paling cepat turun adalah…','Factor XIII','Factor VII','Factor VIII','Factor XII',1,'Factor VII memiliki half-life relatif pendek sehingga PT dapat memanjang lebih awal pada defisiensi vitamin K.', 'Lanjut'),
+Q('Mixing study pada isolated prolonged aPTT dilakukan dengan mencampur plasma pasien dan plasma normal untuk membedakan…','Defisiensi platelet dari thrombocytosis','Fibrinolysis dari thrombosis','Defisiensi faktor dari inhibitor yang mengganggu pemeriksaan','PT dari INR',2,'Koreksi hasil setelah mixing mendukung defisiensi faktor; kegagalan koreksi atau pola waktu/temperatur tertentu mengarah pada inhibitor, dengan interpretasi khusus.', 'Lanjut'),
+Q('Pada mixing study, aPTT yang terkoreksi setelah pencampuran 1:1 paling mendukung…','Adanya inhibitor kuat yang menetap','DIC akut','Anticoagulant lupus selalu positif','Defisiensi satu atau lebih faktor koagulasi',3,'Plasma normal memasok faktor yang kurang sehingga waktu pembekuan dapat terkoreksi pada defisiensi faktor.', 'Lanjut'),
+Q('Lupus anticoagulant dapat menyebabkan aPTT memanjang in vitro, tetapi secara klinis sering berkaitan dengan…','Risiko thrombosis, bukan kecenderungan perdarahan khas','Perdarahan berat pada semua pasien','Defisiensi fibrinogen kongenital','Peningkatan factor VIII',0,'Lupus anticoagulant mengganggu phospholipid-dependent assays dan berkaitan dengan thrombosis pada antiphospholipid syndrome.', 'Lanjut'),
+Q('Pada pasien yang menerima dabigatran, target molekul utama obat tersebut adalah…','Factor Xa','Thrombin (factor IIa)','Factor VIIa','Factor XIIIa',1,'Dabigatran merupakan direct thrombin inhibitor.', 'Menengah'),
+Q('Apixaban dan rivaroxaban bekerja terutama sebagai…','Direct platelet P2Y12 inhibitors','Vitamin K antagonists','Direct factor Xa inhibitors','Fibrinolytic agents',2,'Apixaban dan rivaroxaban menghambat factor Xa secara langsung.', 'Menengah'),
+Q('Obat fibrinolytic seperti alteplase bekerja dengan…','Menghambat COX-1','Menghambat P2Y12','Menghambat vitamin K epoxide reductase','Mengaktivasi plasminogen menjadi plasmin',3,'Alteplase adalah recombinant tPA yang mempercepat konversi plasminogen menjadi plasmin.', 'Menengah'),
+Q('Perbedaan utama anticoagulant dan antiplatelet adalah…','Anticoagulant menargetkan jalur koagulasi, sedangkan antiplatelet menghambat fungsi platelet','Keduanya selalu memiliki target molekuler identik','Antiplatelet hanya bekerja pada fibrin','Anticoagulant hanya menurunkan platelet count',0,'Kedua kelompok menurunkan risiko thrombosis melalui target yang berbeda, meskipun keduanya dapat meningkatkan risiko perdarahan.', 'Dasar'),
+Q('Manakah pasangan yang benar?','PT—intrinsic pathway saja','PT—extrinsic dan common pathway','aPTT—extrinsic pathway saja','TT—platelet adhesion',1,'PT terutama mengevaluasi extrinsic dan common pathway; aPTT untuk intrinsic dan common pathway.', 'Dasar'),
+Q('Pemeriksaan yang mengevaluasi intrinsic dan common pathway adalah…','TT—factor VII activation','INR—platelet aggregation','aPTT—intrinsic dan common pathway','D-dimer—platelet count',2,'aPTT menilai intrinsic dan common pathway; interpretasinya harus mempertimbangkan obat dan inhibitor.', 'Dasar'),
+Q('Jika factor X tidak dapat diaktifkan menjadi Xa, proses yang paling langsung terganggu adalah…','Platelet adhesion via vWF','Pelepasan ADP dari dense granules','Sintesis tissue factor oleh eritrosit','Pembentukan prothrombinase dan produksi thrombin',3,'Factor Xa merupakan protease utama prothrombinase; tanpa Xa, pembentukan thrombin terganggu.', 'Lanjut'),
+Q('Jika fibrinogen sangat rendah, tahap yang paling langsung terganggu adalah…','Pembentukan fibrin setelah thrombin memotong fibrinogen','Aktivasi factor XII','Aktivasi reseptor GPVI','Pembentukan TF–VIIa',0,'Fibrinogen adalah substrat untuk pembentukan fibrin; kadar sangat rendah mengganggu clot formation.', 'Menengah'),
+Q('Jika factor XIII mengalami defisiensi, clot awal dapat terbentuk tetapi…','PT selalu sangat memanjang','Stabilitas fibrin clot menurun dan perdarahan dapat muncul','Platelet tidak dapat beradhesi sama sekali','Thrombin tidak pernah terbentuk',1,'Defisiensi XIII mengganggu cross-link fibrin; PT dan aPTT dapat tetap normal.', 'Lanjut'),
+Q('Mengapa PT dan aPTT dapat normal pada defisiensi factor XIII?','Karena factor XIII tidak terdapat di plasma','Karena fibrin tidak dibutuhkan dalam assay','Karena kedua assay rutin umumnya berhenti pada pembentukan clot awal sebelum menilai stabilisasi fibrin oleh XIIIa','Karena factor XIII adalah platelet receptor',2,'Tes PT/aPTT mendeteksi waktu pembentukan clot awal dan tidak secara langsung mengukur cross-linking fibrin oleh XIIIa.', 'Lanjut'),
+];
+
+
+let quizState=null, quizTimerHandle=null, quizAdvanceHandle=null;
+const QUIZ_SECONDS=20, QUIZ_PASS_MARK=70;
+const quizEl=id=>document.getElementById(id);
+function shuffleArray(items){const a=items.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+function clearQuizClocks(){if(quizTimerHandle){clearInterval(quizTimerHandle);quizTimerHandle=null;}if(quizAdvanceHandle){clearTimeout(quizAdvanceHandle);quizAdvanceHandle=null;}}
+function pauseQuizForNavigation(){
+  if(!quizState||quizState.finished)return;
+  if(quizTimerHandle){clearInterval(quizTimerHandle);quizTimerHandle=null;}
+  if(quizAdvanceHandle){clearTimeout(quizAdvanceHandle);quizAdvanceHandle=null;}
+}
+function resumeQuizForNavigation(){
+  if(!quizState||quizState.finished)return;
+  if(quizState.answers.length>quizState.index){
+    if(!quizAdvanceHandle)quizAdvanceHandle=setTimeout(advanceQuiz,4500);
+  }else if(!quizTimerHandle){
+    quizTimerHandle=setInterval(tickQuizTimer,1000);
+  }
+}
+function syncQuizIntro(){if(quizState&&quizState.finished)return;}
+function updateQuizCountOptions(){
+  const level=quizEl('quizLevel').value;
+  const available=level==='Semua'?quizBank.length:quizBank.filter(q=>q.level===level).length;
+  const countSelect=quizEl('quizCount');
+  [...countSelect.options].forEach(option=>{option.disabled=Number(option.value)>available;});
+  if(countSelect.selectedOptions[0]?.disabled){
+    const valid=[...countSelect.options].filter(option=>!option.disabled);
+    if(valid.length)countSelect.value=valid[valid.length-1].value;
+  }
+}
+function startQuiz(){
+  clearQuizClocks();
+  const name=quizEl('quizStudentName').value.trim();
+  if(!name){quizEl('quizStudentName').focus();quizEl('quizStudentName').setCustomValidity('Masukkan nama untuk sertifikat.');quizEl('quizStudentName').reportValidity();quizEl('quizStudentName').setCustomValidity('');return;}
+  const count=Number(quizEl('quizCount').value);
+  const level=quizEl('quizLevel').value;
+  const eligible=level==='Semua'?quizBank:quizBank.filter(q=>q.level===level);
+  if(eligible.length<count){alert(`Bank soal tingkat ${level} hanya memiliki ${eligible.length} soal. Pilih jumlah soal yang lebih sedikit atau tingkat Campuran.`);return;}
+  const selected=shuffleArray(eligible).slice(0,count).map(q=>{
+    const correctText=q.options[q.answer];
+    const opts=shuffleArray(q.options);
+    return {...q,options:opts,answer:opts.indexOf(correctText)};
+  });
+  quizState={name,questions:selected,index:0,answers:[],seconds:QUIZ_SECONDS,score:0,finished:false,startedAt:new Date()};
+  quizEl('quizIntro').classList.add('hide');quizEl('quizResult').classList.add('hide');quizEl('quizStage').classList.remove('hide');
+  renderQuizQuestion();
+}
+function renderQuizQuestion(){
+  if(!quizState||quizState.finished)return;
+  clearQuizClocks();
+  const q=quizState.questions[quizState.index];quizState.seconds=QUIZ_SECONDS;
+  const progress=(quizState.index/quizState.questions.length)*100;
+  quizEl('quizStage').innerHTML=`
+    <div class="quiz-statusbar">
+      <div class="quiz-status-label">COAGULATION CHALLENGE<small>Soal ${quizState.index+1} dari ${quizState.questions.length}</small></div>
+      <div class="quiz-score-chip">Skor sementara: ${quizState.score}</div>
+      <div class="quiz-timer" id="quizTimer"><strong id="quizSeconds">20</strong></div>
+    </div>
+    <div class="quiz-progress-track"><span style="width:${progress}%"></span></div>
+    <article class="quiz-question-card">
+      <div class="quiz-question-meta"><span>PERTANYAAN ${String(quizState.index+1).padStart(2,'0')}</span><span class="quiz-level">${q.level}</span></div>
+      <h3 class="quiz-question">${q.q}</h3>
+      <div class="quiz-options">${q.options.map((opt,i)=>`<button class="quiz-option" type="button" data-option="${i}"><span class="quiz-option-key">${'ABCD'[i]}</span><span>${opt}</span></button>`).join('')}</div>
+      <div class="quiz-feedback" id="quizFeedback" role="status"></div>
+      <div class="quiz-controls"><span class="quiz-time-note" id="quizTimeNote">Pilih satu jawaban sebelum waktu habis. Soal berganti otomatis.</span><button class="btn primary quiz-next-btn hide" id="quizNextBtn" type="button">Soal berikutnya →</button></div>
+    </article>`;
+  expandAcronyms(quizEl('quizStage'));
+  quizEl('quizStage').querySelectorAll('.quiz-option').forEach(btn=>btn.addEventListener('click',()=>answerQuestion(Number(btn.dataset.option),false)));
+  quizEl('quizNextBtn').addEventListener('click',advanceQuiz);
+  quizTimerHandle=setInterval(tickQuizTimer,1000);
+}
+function tickQuizTimer(){
+  if(!quizState||quizState.finished)return;
+  quizState.seconds=Math.max(0,quizState.seconds-1);
+  const seconds=quizEl('quizSeconds'),timer=quizEl('quizTimer');
+  if(seconds)seconds.textContent=String(quizState.seconds);
+  if(timer){timer.style.setProperty('--timer-progress',`${quizState.seconds/QUIZ_SECONDS*100}%`);if(quizState.seconds<=5)timer.classList.add('warning');}
+  if(quizState.seconds<=0)answerQuestion(null,true);
+}
+function answerQuestion(choiceIndex,timedOut){
+  if(!quizState||quizState.answers.length>quizState.index)return;
+  if(quizTimerHandle){clearInterval(quizTimerHandle);quizTimerHandle=null;}
+  const q=quizState.questions[quizState.index];const correct=!timedOut&&choiceIndex===q.answer;
+  quizState.answers.push({selected:timedOut?null:choiceIndex,correct,timedOut});
+  if(correct)quizState.score++;
+  const buttons=quizEl('quizStage').querySelectorAll('.quiz-option');
+  buttons.forEach((btn,i)=>{btn.disabled=true;if(i===q.answer)btn.classList.add('correct');else if(i===choiceIndex)btn.classList.add('incorrect');});
+  const feedback=quizEl('quizFeedback');
+  feedback.className=`quiz-feedback show ${correct?'good':'bad'}`;
+  feedback.innerHTML=`<b>${timedOut?'Waktu habis.':correct?'Tepat sekali!':'Belum tepat.'}</b> ${q.explanation}`;
+  expandAcronyms(feedback);
+  quizEl('quizTimeNote').textContent=timedOut?'Jawaban tercatat sebagai tidak terjawab.':`Jawaban ${correct?'benar':'belum tepat'} telah dikunci.`;
+  quizEl('quizNextBtn').classList.remove('hide');
+  quizAdvanceHandle=setTimeout(advanceQuiz,4500);
+}
+function advanceQuiz(){
+  if(!quizState||quizState.finished)return;
+  clearQuizClocks();
+  if(quizState.index+1>=quizState.questions.length){finishQuiz();return;}
+  quizState.index++;renderQuizQuestion();
+}
+function finishQuiz(){
+  clearQuizClocks();quizState.finished=true;
+  const total=quizState.questions.length,correct=quizState.score,answered=quizState.answers.filter(a=>a.selected!==null).length,skipped=total-answered,wrong=answered-correct;
+  const percent=Math.round(correct/total*100),passed=percent>=QUIZ_PASS_MARK;
+  const dateText=new Intl.DateTimeFormat('id-ID',{day:'numeric',month:'long',year:'numeric'}).format(new Date());
+  quizEl('quizStage').classList.add('hide');quizEl('quizResult').classList.remove('hide');
+  const trophy=`<svg viewBox="0 0 100 100" width="76" height="76" aria-label="Piala"><defs><linearGradient id="trophyGold" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#ffe69b"/><stop offset=".55" stop-color="#e6ad35"/><stop offset="1" stop-color="#a66d16"/></linearGradient></defs><path d="M29 16h42v14c0 19-10 29-21 29S29 49 29 30z" fill="url(#trophyGold)" stroke="#9d6d22" stroke-width="2"/><path d="M29 22H13v9c0 14 9 21 22 21M71 22h16v9c0 14-9 21-22 21" fill="none" stroke="#c58b28" stroke-width="7" stroke-linecap="round"/><path d="M44 58v13H32v9h36v-9H56V58" fill="#ba8427"/><path d="M25 88h50" stroke="#9d6d22" stroke-width="5" stroke-linecap="round"/><path d="m50 25 4 8 9 1-7 6 2 9-8-5-8 5 2-9-7-6 9-1z" fill="#fff7d7"/></svg>`;
+  const review=quizState.questions.map((q,i)=>{const a=quizState.answers[i];const wasCorrect=a&&a.correct;const selected=a?.selected===null||a?.selected===undefined?'Tidak dijawab':q.options[a.selected];return `<details class="review-item"><summary>${i+1}. ${q.q}</summary><p class="${wasCorrect?'review-good':'review-bad'}">${wasCorrect?'Benar':'Belum benar'} • Jawaban Anda: ${selected}</p><p><b>Jawaban benar:</b> ${q.options[q.answer]}</p><p><b>Pembahasan:</b> ${q.explanation}</p></details>`;}).join('');
+  quizEl('quizResult').innerHTML=`<div class="quiz-result-card">
+    <div class="quiz-result-top"><div class="quiz-trophy">${trophy}</div><h2>${passed?'Luar biasa! Tantangan selesai.':'Tantangan berhasil diselesaikan!'}</h2><p>${passed?'Anda mencapai nilai minimum sertifikat pencapaian.':'Terus berlatih untuk mencapai nilai minimum sertifikat pencapaian.'}</p></div>
+    <div class="quiz-result-stats"><div class="quiz-stat"><b>${percent}%</b><span>NILAI AKHIR</span></div><div class="quiz-stat"><b>${correct}</b><span>BENAR</span></div><div class="quiz-stat"><b>${wrong}</b><span>SALAH</span></div><div class="quiz-stat"><b>${skipped}</b><span>TIDAK TERJAWAB</span></div></div>
+    <div class="quiz-result-actions"><button class="btn primary" id="printCertBtn" type="button">🏆 Cetak sertifikat</button><button class="btn ghost" id="retryQuizBtn" type="button">↻ Coba sesi baru</button><button class="btn ghost" id="restartConfigBtn" type="button">Ubah pengaturan</button></div>
+    <div class="certificate-shell" id="certificateShell"><div class="certificate">
+      <div class="certificate-kicker">COAGULATION LAB • INTERACTIVE LEARNING</div><div class="certificate-trophy">${trophy}</div>
+      <h2>${passed?'Certificate of Achievement':'Certificate of Completion'}</h2>
+      <p class="certificate-lead">Dengan bangga diberikan kepada</p><div class="certificate-name" id="certificateName"></div>
+      <p class="certificate-description">Atas partisipasi dan penyelesaian <b>Coagulation Challenge</b>, evaluasi interaktif mengenai primary hemostasis, intrinsic pathway, extrinsic pathway, common pathway, dan interpretasi pemeriksaan koagulasi.</p>
+      <div class="certificate-score">${percent}%</div><div class="certificate-status">${passed?'ACHIEVEMENT • PASS':'COMPLETION • PARTICIPATION'}</div>
+      <p class="certificate-description">${correct} jawaban benar dari ${total} soal • ${QUIZ_SECONDS} detik per soal • ${dateText}</p>
+      <div class="certificate-footer"><div><b>${dateText}</b><br>Tanggal penyelesaian</div><div class="certificate-sign">COAGULATION LAB<br><span style="font-weight:500">Interactive Learning Experience</span></div></div>
+    </div></div>
+    <div class="quiz-review"><h3>Ulasan jawaban dan pembahasan</h3><p class="sub">Buka setiap pertanyaan untuk melihat jawaban benar dan alasan ilmiahnya.</p>${review}</div>
+  </div>`;
+  quizEl('certificateName').textContent=quizState.name;
+  quizEl('printCertBtn').addEventListener('click',()=>window.print());
+  quizEl('retryQuizBtn').addEventListener('click',startQuiz);
+  quizEl('restartConfigBtn').addEventListener('click',()=>{quizEl('quizResult').classList.add('hide');quizEl('quizIntro').classList.remove('hide');quizState=null;});
+  expandAcronyms(quizEl('quizResult'));
+}
+quizEl('quizStartBtn').addEventListener('click',startQuiz);
+quizEl('quizLevel').addEventListener('change',updateQuizCountOptions);
+updateQuizCountOptions();
+quizEl('quizStudentName').addEventListener('keydown',e=>{if(e.key==='Enter')startQuiz();});
+
+drawPath();expandAcronyms(document.querySelector('main'));
+</script></body></html>
